@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floor Casting Department – Concrete & Epoxy Services</title>
+  <meta name="description" content="Floor Casting Department provides professional concrete, epoxy, and decorative stamped flooring services in KSA. Contact us on WhatsApp +966 595313995." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#25D366;       /* WhatsApp green */
+      --dark:#1a1a1a;
+      --text:#2a2a2a;
+      --muted:#6b7280;       /* gray-500 */
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:16px;
+      --radius-sm:12px;
+      --container:1140px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .container{max-width:var(--container);margin-inline:auto;padding:0 20px}
+
+    /* Header / Hero */
+    .hero{
+      position:relative;
+      min-height:66vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      color:#fff;
+      background:
+        linear-gradient( rgba(0,0,0,.55), rgba(0,0,0,.55) ),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1800&auto=format&fit=crop") center/cover no-repeat;
+    }
+    .hero h1{font-family:Montserrat,Inter,sans-serif;font-size:clamp(32px,4vw,52px);margin:0 0 10px;font-weight:700;letter-spacing:.3px}
+    .hero p{margin:0 0 26px;color:#e5e7eb;font-size:clamp(16px,2.2vw,18px)}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:14px 22px;border-radius:999px;border:0;cursor:pointer;
+      background:var(--brand);color:#fff;font-weight:700;text-decoration:none;
+      box-shadow:0 8px 18px rgba(37,211,102,.35);transition:transform .15s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,211,102,.45)}
+    .btn svg{width:22px;height:22px;flex:0 0 22px}
+
+    /* Sections */
+    section{padding:70px 0}
+    .section-title{
+      font-family:Montserrat,Inter,sans-serif;
+      font-size:clamp(22px,2.8vw,30px);
+      margin:0 0 8px;font-weight:700;letter-spacing:.2px;color:var(--dark);text-align:center;
+    }
+    .section-sub{color:var(--muted);text-align:center;margin:0 auto 36px;max-width:760px}
+
+    /* About */
+    .about{
+      background:var(--card);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:34px 28px;margin-top:-40px;
+    }
+    .about-grid{
+      display:grid;gap:26px;align-items:center;
+      grid-template-columns:1.2fr .8fr;
+    }
+    .about img{border-radius:var(--radius-sm);box-shadow:0 8px 18px rgba(0,0,0,.08)}
+    @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+    /* Services */
+    .cards{
+      display:grid;gap:18px;
+      grid-template-columns:repeat(12,1fr);
+    }
+    .card{
+      grid-column:span 4;
+      background:var(--card);border-radius:var(--radius-sm);padding:22px;
+      box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .2s ease;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(0,0,0,.12)}
+    .card h3{margin:6px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    .icon{
+      width:40px;height:40px;display:grid;place-items:center;
+      border-radius:12px;background:#ecfdf3;margin-bottom:8px;
+    }
+    @media (max-width:1000px){.card{grid-column:span 6}}
+    @media (max-width:640px){.card{grid-column:span 12}}
+
+    /* Gallery */
+    .gallery{
+      display:grid;gap:14px;grid-template-columns:repeat(12,1fr);
+    }
+    .gallery .ph{
+      grid-column:span 4;height:220px;border-radius:14px;background:#e5e7eb;overflow:hidden;
+      box-shadow:var(--shadow);background-position:center;background-size:cover;
+    }
+    @media (max-width:900px){.gallery .ph{grid-column:span 6}}
+    @media (max-width:600px){.gallery .ph{grid-column:span 12}}
+
+    /* WhatsApp CTA strip */
+    .wa-strip{
+      background:#e8fdee;border:1px solid #d2f8e5;border-radius:var(--radius);
+      padding:26px;display:flex;gap:18px;align-items:center;justify-content:space-between;
+      box-shadow:var(--shadow);flex-wrap:wrap;
+    }
+    .wa-strip h3{margin:0;font-size:20px}
+    .wa-strip p{margin:0;color:var(--muted)}
+    .wa-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Contact */
+    .contact{
+      background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .contact-grid{display:grid;gap:22px;grid-template-columns:1fr 1fr}
+    .contact form{display:grid;gap:12px}
+    label{font-weight:600;font-size:14px}
+    input,textarea{
+      width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e5e7eb;font:inherit;
+      background:#fff;outline:none;transition:border-color .15s ease, box-shadow .15s ease;
+    }
+    input:focus,textarea:focus{border-color:#b8eecd;box-shadow:0 0 0 4px rgba(37,211,102,.15)}
+    textarea{min-height:120px;resize:vertical}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Footer */
+    footer{
+      background:var(--dark);color:#e5e7eb;padding:28px 0;margin-top:60px
+    }
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .foot small{color:#94a3b8}
+
+    /* Floating WhatsApp button */
+    .wa-float{
+      position:fixed;right:18px;bottom:18px;z-index:50;
+      display:inline-flex;align-items:center;gap:10px;
+      background:var(--brand);color:#fff;border-radius:999px;padding:12px 16px;
+      text-decoration:none;box-shadow:0 10px 22px rgba(37,211,102,.45);font-weight:700;
+    }
+    .wa-float svg{width:22px;height:22px}
+  </style>
+</head>
+<body>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/966595313995" target="_blank" rel="noopener">
+    <!-- WhatsApp SVG -->
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.11 17.17c-.29-.14-1.66-.82-1.91-.91c-.26-.1-.45-.14-.64.14c-.19.29-.74.91-.91 1.1c-.17.19-.34.21-.62.07c-.29-.14-1.22-.45-2.33-1.45c-.86-.77-1.44-1.72-1.61-2.01c-.17-.29 0-.45.13-.59c.13-.13.29-.34.43-.5c.14-.17.19-.29.29-.48c.1-.19.05-.36-.02-.5c-.07-.14-.64-1.54-.88-2.11c-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.77.36c-.26.29-1.02 1-1.02 2.43c0 1.43 1.04 2.81 1.18 3c.14.19 2.06 3.14 4.99 4.39c.69.3 1.23.48 1.65.62c.69.22 1.32.19 1.82.12c.55-.08 1.66-.68 1.9-1.34c.24-.66.24-1.22.17-1.34c-.07-.12-.26-.19-.55-.33zM16.04 4C9.94 4 5 8.94 5 15.02c0 1.95.51 3.78 1.41 5.37L5 28l7.77-2.04c1.54.84 3.3 1.32 5.17 1.32C24.03 27.28 29 22.32 29 16.24S24.15 4 16.04 4zM16 25.26c-1.65 0-3.19-.44-4.53-1.2l-.32-.19l-4.61 1.21l1.23-4.49l-.21-.33A9.25 9.25 0 0 1 6.72 15A9.28 9.28 0 1 1 16 25.26z"/></svg>
+    WhatsApp
+  </a>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <h1>Floor Casting Department</h1>
+      <p>All Kinds of Concrete &amp; Epoxy Services • Decorative Stamped Concrete • Printed Pigments</p>
+      <a class="btn" href="https://wa.me/966595313995" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.17c-.29-.14-1.66-.82-1.91-.91c-.26-.1-.45-.14-.64.14c-.19.29-.74.91-.91 1.1c-.17.19-.34.21-.62.07c-.29-.14-1.22-.45-2.33-1.45c-.86-.77-1.44-1.72-1.61-2.01c-.17-.29 0-.45.13-.59c.13-.13.29-.34.43-.5c.14-.17.19-.29.29-.48c.1-.19.05-.36-.02-.5c-.07-.14-.64-1.54-.88-2.11c-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.77.36c-.26.29-1.02 1-1.02 2.43c0 1.43 1.04 2.81 1.18 3c.14.19 2.06 3.14 4.99 4.39c.69.3 1.23.48 1.65.62c.69.22 1.32.19 1.82.12c.55-.08 1.66-.68 1.9-1.34c.24-.66.24-1.22.17-1.34c-.07-.12-.26-.19-.55-.33zM16.04 4C9.94 4 5 8.94 5 15.02c0 1.95.51 3.78 1.41 5.37L5 28l7.77-2.04c1.54.84 3.3 1.32 5.17 1.32C24.03 27.28 29 22.32 29 16.24S24.15 4 16.04 4zM16 25.26c-1.65 0-3.19-.44-4.53-1.2l-.32-.19l-4.61 1.21l1.23-4.49l-.21-.33A9.25 9.25 0 0 1 6.72 15A9.28 9.28 0 1 1 16 25.26z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ABOUT -->
+    <section aria-labelledby="about">
+      <div class="about">
+        <div class="about-grid">
+          <div>
+            <h2 id="about" class="section-title">About Us</h2>
+            <p class="section-sub">Experienced team delivering durable, high-quality concrete solutions for residential, commercial, and industrial projects across KSA.</p>
+            <p>We specialize in floor casting, asphalt epoxy casting, decorative stamped concrete, printed pigments, sealing, and surface finishing. Our work is guided by strong quality control, safety, and on-time delivery.</p>
+          </div>
+          <img alt="Concrete floor finishing" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section aria-labelledby="services">
+      <h2 id="services" class="section-title">Our Services</h2>
+      <p class="section-sub">End-to-end solutions from surface preparation to finishing and maintenance.</p>
+
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <div class="icon">🏗️</div>
+          <h3>Asphalt Epoxy Casting</h3>
+          <p>Durable epoxy systems for high-traffic and industrial areas.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon">🎨</div>
+          <h3>Decorative Stamped Concrete</h3>
+          <p>Architectural textures and patterns for premium looks.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon">🔒</div>
+          <h3>Surface Sealing</h3>
+          <p>Protective sealers to resist stains, water, and wear.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon">🧱</div>
+          <h3>Printed Pigment Concrete</h3>
+          <p>Color-rich finishes with consistent pigment dispersion.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="icon">✨</div>
+          <h3>Special Finishes</h3>
+          <p>Polished, anti-slip, and custom surface treatments.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section aria-labelledby="gallery">
+      <h2 id="gallery" class="section-title">Gallery</h2>
+      <p class="section-sub">Replace placeholders with your real project photos.</p>
+      <div class="gallery">
+        <div class="ph" style="background-image:url('https://source.unsplash.com/800x600/?concrete,site');"></div>
+        <div class="ph" style="background-image:url('https://source.unsplash.com/801x600/?construction,floor');"></div>
+        <div class="ph" style="background-image:url('https://source.unsplash.com/802x600/?epoxy,industrial');"></div>
+      </div>
+    </section>
+
+    <!-- WHATSAPP CONTACT STRIP -->
+    <section aria-labelledby="whatsapp">
+      <div class="wa-strip">
+        <div>
+          <h3 id="whatsapp">Contact Us on WhatsApp</h3>
+          <p class="muted">Fast responses • Quotes • Site visits</p>
+        </div>
+        <div class="wa-actions">
+          <a class="btn" href="https://wa.me/966595313995" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.17c-.29-.14-1.66-.82-1.91-.91c-.26-.1-.45-.14-.64.14c-.19.29-.74.91-.91 1.1c-.17.19-.34.21-.62.07c-.29-.14-1.22-.45-2.33-1.45c-.86-.77-1.44-1.72-1.61-2.01c-.17-.29 0-.45.13-.59c.13-.13.29-.34.43-.5c.14-.17.19-.29.29-.48c.1-.19.05-.36-.02-.5c-.07-.14-.64-1.54-.88-2.11c-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.77.36c-.26.29-1.02 1-1.02 2.43c0 1.43 1.04 2.81 1.18 3c.14.19 2.06 3.14 4.99 4.39c.69.3 1.23.48 1.65.62c.69.22 1.32.19 1.82.12c.55-.08 1.66-.68 1.9-1.34c.24-.66.24-1.22.17-1.34c-.07-.12-.26-.19-.55-.33zM16.04 4C9.94 4 5 8.94 5 15.02c0 1.95.51 3.78 1.41 5.37L5 28l7.77-2.04c1.54.84 3.3 1.32 5.17 1.32C24.03 27.28 29 22.32 29 16.24S24.15 4 16.04 4zM16 25.26c-1.65 0-3.19-.44-4.53-1.2l-.32-.19l-4.61 1.21l1.23-4.49l-.21-.33A9.25 9.25 0 0 1 6.72 15A9.28 9.28 0 1 1 16 25.26z"/></svg>
+            +966 595313995
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section aria-labelledby="contact">
+      <h2 id="contact" class="section-title">Get a Free Quote</h2>
+      <p class="section-sub">Share your project details and we’ll get back quickly.</p>
+      <div class="contact">
+        <div class="contact-grid">
+          <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you on WhatsApp soon.');">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div>
+              <label for="phone">Phone / WhatsApp</label>
+              <input id="phone" name="phone" placeholder="+966 5XXXXXXXX" required />
+            </div>
+            <div>
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Tell us about the site, size, and finish you need…" required></textarea>
+            </div>
+            <button class="btn" type="submit">
+              Request Quote
+            </button>
+            <p class="muted">Or message us directly on WhatsApp: <strong>+966 595313995</strong></p>
+          </form>
+          <div>
+            <h3>Contact Info</h3>
+            <p><strong>Phone / WhatsApp:</strong> +966 595313995</p>
+            <p><strong>Email:</strong> info@floorcasting.com</p>
+            <p><strong>Location:</strong> Saudi Arabia</p>
+            <p class="muted">Working hours: Sat–Thu, 8:00–18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Floor Casting Department</strong></div>
+      <small>© <span id="y"></span> All rights reserved</small>
+    </div>
+  </footer>
+
+  <script>
+    // Current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
